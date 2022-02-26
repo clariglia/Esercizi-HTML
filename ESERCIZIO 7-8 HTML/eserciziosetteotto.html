@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Lezione HTML</title>
+	<style>
+		label {
+			display: block
+		}
+	</style>
+</head>
+<body>
+	<h2>Registrazione</h2>
+	<form>
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" id="Email" required>
+		</div>
+		<div>
+			<label for="Password">Password:</label> 
+			<input type="password" id="password" required>
+		</div>
+		<div>
+			<label for="Name">Nome:</label>
+			<input type="text" id="name" required>
+		</div>
+		<div>
+			<label>Cognome:</label>
+			<input type="text" id="Cognome" required>
+		</div>
+		<div>
+			<label for="date">Data di nascita:</label>
+			<input type="date" id="date" value="2022-02-26" min="1920-01-01" max="3000-01-01" required>
+		</div>
+		<div>
+			<label for="tel">Numero di telefono:</label>
+			<input type="tel" id="tel" required>
+		</div>
+		<div>
+			<label for="tariffa">Scegli un piano tariffario:</label>
+				<select name="tariffa" id="tariffa">
+					<option value="gratuito">Gratuito</option>
+					<optgroup label="Mensile"></optgroup>
+					<option value="9.99$">9.99$</option>
+					<optgroup label="Annuale"></optgroup>
+					<option value="24.99$">24.99$</option>
+				</select>
+		</div>
+		<div>
+			<p>Seleziona i possibili vantaggi:</p>
+				<label for="pro">PRO
+					<input type="radio" name="pro" value="pro" checked>
+				</label>
+				<label for="basic">Basic
+					<input type="radio" name="basic">
+				</label>
+		</div>
+		<div>
+			<label for="cc">Carta di credito:</label>
+				<input id="cc" type="tel" pattern="[^a-z]+[0-9]" maxlength="16" required>
+		</div>
+		<div>
+			<label for="scadenza">Scadenza</label>
+				<input type="month" id="scadenza" min="1999-01" max="2080-01" required>
+		</div>	
+		<div>
+			<label for="cvc">Cvc</label>
+			<input type="text" id="cvc" pattern="[^a-z]+[0-9]" maxlength="3" required>
+		</div>
+		<div>
+			<label for="address">Indirizzo di fatturazione</label>
+				<input type="text" id="address">
+		</div>
+	<button>Registrati</button>
+	</form>
+</body>
+</html>
